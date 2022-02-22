@@ -1,0 +1,11 @@
+.fighter {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: saddlebrown;
+  background-color: darkkhaki;
+  width: 300px;
+  margin: 0px auto 20px auto;
+  border: 3px solid brown;
+  border-radius: 12%;
+  height: 450px;
+}

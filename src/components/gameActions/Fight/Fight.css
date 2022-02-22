@@ -1,0 +1,10 @@
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.fight {
+  background-image: url('https://www.nordicvisitor.com/images/lapland/snowy-trees-sunset-rovaniemi%C2%A9visitrovaniemi.fi.jpg');
+  height: 100vh;
+}

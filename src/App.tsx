@@ -10,7 +10,7 @@ export type FighterType = {
     armor: number
     strength: number
     avatar: string
-    hit: (id: string) => void
+    hit?: (id: string) => void
 }
 
 function App() {
@@ -35,7 +35,6 @@ function App() {
             fullHP: 50,
             armor: 0,
             avatar: 'https://64.media.tumblr.com/28146c7955b7025d394d43467f64fb52/tumblr_p0p3ljjsir1tibuboo1_1280.jpg',
-            hit: hitHandler,
         }
     )
 
@@ -51,7 +50,6 @@ function App() {
         if (whoIsBitten && whoHits) {
             whoIsBitten.fullHP = whoIsBitten.fullHP - (whoHits.strength - whoIsBitten.armor)
         }
-
         setFighters(fightersCopy)
     }
 

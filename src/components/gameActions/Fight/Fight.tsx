@@ -1,30 +1,22 @@
 import React from 'react'
-import {FighterType} from "../../../App";
-import {Fighter} from "../../enemies/Fighter/Fighter";
+import {FighterType, GameStatsType} from "../../../App"
+import {Fighter} from "../../enemies/Fighter/Fighter"
 import './Fight.css'
-import { Alert } from 'react-bootstrap'
 
 type PropsType = {
-    fighters: Array<FighterType>
+    thorvald: FighterType
+    enemies: Array<FighterType>
+    gameStats: GameStatsType
 }
 
-<Alert variant={'primary'}>Tap on image of enemy for hit him!</Alert>
+// alert("Tap on image of enemy for hit him!")
 
 export const Fight = (props: PropsType) => {
 
-    return (
+    let enemy = props.enemies.find(en => !en.isDead)
 
-        <div className='fight'>
-            {props.fighters.map(f => (<Fighter
-                name={f.name}
-                fullHP={f.fullHP}
-                armor={f.armor}
-                strength={f.strength}
-                avatar={f.avatar}
-                key={f.id}
-                id={f.id}
-                hit={f.hit}/>)
-            )}
-        </div>
-    )
+    return <div className='fight'>
+        <Fighter fighter={props.thorvald} gameStats={props.gameStats}/>
+        {enemy ? <Fighter fighter={enemy}/> : ''}
+    </div>
 }

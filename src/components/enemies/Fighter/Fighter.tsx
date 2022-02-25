@@ -1,22 +1,32 @@
-import {FighterType} from "../../../App";
+import {FighterType, GameStatsType} from "../../../App";
 import './Fighter.css'
 
-export const Fighter = (props: FighterType) => {
+type PropsType = {
+    fighter: FighterType
+    gameStats?: GameStatsType
+}
 
-    function hitHandler() {
-        if (props.hit) {
-            props.hit(props.id)
+export const Fighter = (props: PropsType) => {
+
+    const hitHandler = () => {
+        if (props.fighter.hit) {
+            props.fighter.hit(props.fighter.id)
         }
     }
-
     return (
         <div>
             <div className='fighter'>
-                <div>{props.name}</div>
-                {props.name === 'Thorvald' ?  <img src={props.avatar}/> : <img src={props.avatar} onClick={hitHandler}/>}
-                <div>Strength: {props.strength}</div>
-                <div>Armor: {props.armor}</div>
-                <div>HP: {props.fullHP}</div>
+                <div>{props.fighter.name}</div>
+                <div>Level: {props.fighter.level}</div>
+                <div>XP: {props.fighter.XP} {props.fighter.name === 'Thorvald' ?
+                    "/ " + props.gameStats?.levelsScore[props.fighter.level - 1] : ""}
+                </div>
+                {props.fighter.name !== 'Thorvald' ?
+                    <div onClick={hitHandler}><img src={props.fighter.avatar}/></div> :
+                    <img src={props.fighter.avatar}/>}
+                <div>Strength: {props.fighter.strength}</div>
+                <div>Armor: {props.fighter.armor}</div>
+                <div>HP: {props.fighter.fullHP}</div>
             </div>
         </div>
     )

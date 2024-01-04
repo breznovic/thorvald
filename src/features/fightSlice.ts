@@ -1,8 +1,7 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { FighterType, Thorvald } from "../common/types/types";
-import NavigateToFinal from "../utils/NavigateToFinal";
 import { enemies } from "./../store/enemies";
-
+import { useNavigate } from "react-router-dom";
 
 const initialState: {
   enemiesForFight: FighterType;
@@ -12,7 +11,7 @@ const initialState: {
   thorvald: {
     id: "thorvald",
     name: "Thorvald",
-    strength: 5,
+    strength: 50, //return to 5
     fullHP: 100,
     maxHP: 100,
     armor: 0,
@@ -67,20 +66,22 @@ export const fightSlice = createSlice({
         const currentIndex = enemies.findIndex((e) => e.id === enemy.id);
         const nextIndex = currentIndex + 1;
         state.enemiesForFight = enemies[nextIndex];
+
+        /* if (enemies.length > 5) {
+          const navigate = useNavigate();
+
+          navigate("/final");
+        } */ 
+        // TODO
       }
     },
     clickOnDeadEnemy: (state, action: PayloadAction<FighterType>) => {
       let enemy = state.enemiesForFight;
       enemy.isDead = false;
     },
-    goToFinal: (state, action: PayloadAction<FighterType>) => {
-      if (enemies.length < 0) {
-        NavigateToFinal();
-      }
-    },
   },
 });
 
-export const { hitEnemy, clickOnDeadEnemy, goToFinal } = fightSlice.actions;
+export const { hitEnemy, clickOnDeadEnemy } = fightSlice.actions;
 
 export default fightSlice.reducer;

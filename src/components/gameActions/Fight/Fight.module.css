@@ -1,0 +1,111 @@
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.fight {
+  background-image: url("https://www.nordicvisitor.com/images/lapland/snowy-trees-sunset-rovaniemi%C2%A9visitrovaniemi.fi.jpg");
+  display: flex;
+  flex-direction: column;
+  min-height: 94.7vh;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.header {
+  background-color: salmon;
+  min-height: 35px;
+  font-family: "Gothic A1", sans-serif;
+  color: #333333;
+  padding-top: 15px;
+  font-size: 20px;
+  opacity: 0.89;
+  text-align: center;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.button {
+  position: relative;
+  margin: -34px 0px 0px 1100px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Gothic A1", sans-serif;
+  color: rgb(107, 63, 6);
+}
+
+.modalContent {
+  background-color: rgb(214, 214, 165);
+  padding: 20px;
+  margin: 450px 750px 0px 0px;
+}
+
+.modal button {
+  margin-left: 140px;
+  background-color: rgb(192, 192, 137);
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    margin: -34px 0px 0px 360px;
+    padding: 0px;
+  }
+  .modalContent {
+    margin: 450px 250px 0px 0px;
+    padding: auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .button {
+    margin: -34px 0px 0px 400px;
+  }
+  .modalContent {
+    margin: 450px 450px 0px 0px;
+    padding: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .button {
+    margin: -34px 0px 0px 500px;
+  }
+  .modalContent {
+    margin: 450px 650px 0px 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .button {
+    margin: -34px 0px 0px 700px;
+  }
+  .modalContent {
+    margin: 450px 750px 0px 0px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .button {
+    margin: -34px 0px 0px 1060px;
+  }
+  .modalContent {
+    margin: 450px 750px 0px 0px;
+  }
+}

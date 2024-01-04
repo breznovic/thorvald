@@ -1,0 +1,82 @@
+.common {
+  text-align: center;
+  background-color: #1b4332;
+  background-image: linear-gradient(to bottom, #1b4332, #2d6a4f);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 94.7vh;
+  color: #ffffffc2;
+}
+
+.common .button {
+  text-align: center;
+  margin-top: 50px;
+}
+.common p {
+  margin: 5px 0px 0px auto;
+  padding: 2px;
+  font-size: 19px;
+  font-family: "Gothic A1", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: start;
+}
+
+.common .textBlock {
+  padding: 70px 0px 0px 450px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.header {
+  background-color: #4e6a52;
+  min-height: 35px;
+  font-family: "Gothic A1", sans-serif;
+  color: #ffffff;
+  padding-top: 15px;
+  font-size: 20px;
+  opacity: 0.89;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #4e6a52, #7a9e80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .common .textBlock {
+    padding: 100px 0 0 70px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .common .textBlock {
+    padding: 100px 0 0 120px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .common .textBlock {
+    padding: 100px 0 0 200px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .common .textBlock {
+    padding: 100px 0 0 300px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .common .textBlock {
+    padding: 100px 0 0 450px;
+  }
+}

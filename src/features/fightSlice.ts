@@ -11,7 +11,7 @@ const initialState: {
   thorvald: {
     id: "thorvald",
     name: "Thorvald",
-    strength: 50, //return to 5
+    strength: 5,
     fullHP: 100,
     maxHP: 100,
     armor: 0,
@@ -71,7 +71,7 @@ export const fightSlice = createSlice({
           const navigate = useNavigate();
 
           navigate("/final");
-        } */ 
+        } */
         // TODO
       }
     },

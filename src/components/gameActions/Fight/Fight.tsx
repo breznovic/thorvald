@@ -9,7 +9,7 @@ import { Header } from "../../header/Header";
 import { useNavigate } from "react-router-dom";
 
 export const Fight = () => {
-  const enemyForFight = useSelector(
+  let enemyForFight = useSelector(
     (state: RootState) => state.fight.enemiesForFight
   );
 
@@ -23,7 +23,7 @@ export const Fight = () => {
     dispatch(setEnemyForFight());
   }, [dispatch]);
 
-  if (enemyForFight.name === "Final") {
+  if (enemyForFight.id === "Final") {
     navigate("/final");
   }
 

@@ -10,7 +10,7 @@ const initialState: {
   thorvald: {
     id: "thorvald",
     name: "Thorvald",
-    strength: 5,
+    strength: 500,
     fullHP: 100,
     maxHP: 100,
     armor: 0,

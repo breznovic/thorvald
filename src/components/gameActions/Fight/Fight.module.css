@@ -10,7 +10,7 @@ img {
   flex-direction: column;
   min-height: 94.7vh;
 }
-
+/* 
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
@@ -19,7 +19,7 @@ img {
     transform: translateX(0);
   }
 }
-
+ */
 .header {
   background-color: salmon;
   min-height: 35px;
@@ -34,7 +34,6 @@ img {
 
 .button {
   position: relative;
-  margin: -34px 0px 0px 1100px;
 }
 
 .modal {
@@ -54,7 +53,6 @@ img {
 .modalContent {
   background-color: rgb(214, 214, 165);
   padding: 20px;
-  margin: 450px 750px 0px 0px;
 }
 
 .modal button {
@@ -64,48 +62,48 @@ img {
 
 @media only screen and (max-width: 600px) {
   .button {
-    margin: -34px 0px 0px 360px;
+    margin: -30px 0px 0px 360px;
     padding: 0px;
   }
   .modalContent {
-    margin: 450px 250px 0px 0px;
+    margin: 200px 0px 0px 0px;
     padding: auto;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .button {
-    margin: -34px 0px 0px 400px;
+    margin: -30px 0px 0px 400px;
   }
   .modalContent {
-    margin: 450px 450px 0px 0px;
+    margin: 200px 0px 0px 0px;
     padding: auto;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .button {
-    margin: -34px 0px 0px 500px;
+    margin: -30px 0px 0px 500px;
   }
   .modalContent {
-    margin: 450px 650px 0px 0px;
+    margin: 200px 0px 0px 0px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .button {
-    margin: -34px 0px 0px 700px;
+    margin: -30px 0px 0px 700px;
   }
   .modalContent {
-    margin: 450px 750px 0px 0px;
+    margin: 200px 0px 0px 0px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .button {
-    margin: -34px 0px 0px 1060px;
+    margin: -30px 0px 0px 1060px;
   }
   .modalContent {
-    margin: 450px 750px 0px 0px;
+    margin: 0px 0px 50px 0px;
   }
 }

@@ -6,6 +6,7 @@ import { setEnemyForFight } from "../../../features/fightSlice";
 import { useSelector } from "react-redux";
 import Button from "../../../common/button/Button";
 import { Header } from "../../header/Header";
+import { useNavigate } from "react-router-dom";
 
 export const Fight = () => {
   const enemyForFight = useSelector(
@@ -16,9 +17,15 @@ export const Fight = () => {
 
   const dispatch = useAppDispatch();
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     dispatch(setEnemyForFight());
   }, [dispatch]);
+
+  if (enemyForFight.name === "Final") {
+    navigate("/final");
+  }
 
   const [showModal, setShowModal] = useState(true);
 

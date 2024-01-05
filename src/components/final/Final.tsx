@@ -15,7 +15,7 @@ const Final = () => {
   return (
     <>
       <div className={s.header}>
-        <Header title="Future content" />
+        <Header title="To be continued..." />
       </div>
       <div className={s.common}>
         <div className={s.textBlock}>

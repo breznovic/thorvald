@@ -70,4 +70,16 @@ export const enemies: FighterType[] = [
     level: 1,
     isDead: false,
   },
+  {
+    id: nanoid(8),
+    name: "Final",
+    strength: 10,
+    fullHP: 10,
+    maxHP: 10,
+    armor: 10,
+    avatar: "",
+    XP: 10,
+    level: 1,
+    isDead: false,
+  },
 ];

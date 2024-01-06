@@ -23,7 +23,7 @@ export const Fight = () => {
     dispatch(setEnemyForFight());
   }, [dispatch]);
 
-  if (enemyForFight.id === "Final") {
+  if (enemyForFight.name === "Final") {
     navigate("/final");
   }
 

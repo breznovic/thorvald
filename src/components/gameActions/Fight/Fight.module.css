@@ -10,7 +10,7 @@ img {
   flex-direction: column;
   min-height: 94.7vh;
 }
-/* 
+
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
@@ -19,7 +19,7 @@ img {
     transform: translateX(0);
   }
 }
- */
+
 .header {
   background-color: salmon;
   min-height: 35px;

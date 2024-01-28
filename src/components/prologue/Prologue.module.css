@@ -4,7 +4,7 @@
   background-image: linear-gradient(to bottom, #1b4332, #2d6a4f);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 94.7vh;
+  min-height: 94.6vh;
   color: #ffffffc2;
 }
 
@@ -15,16 +15,10 @@
 .common p {
   margin: 5px 0px 0px auto;
   padding: 2px;
-  font-size: 19px;
   font-family: "Gothic A1", sans-serif;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: start;
-}
-
-.common .textBlock {
-  padding: 70px 0px 0px 450px;
 }
 
 @keyframes slideIn {
@@ -53,30 +47,60 @@
 
 @media only screen and (max-width: 600px) {
   .common .textBlock {
-    padding: 100px 0 0 70px;
+    padding: 100px 0px 0px 8px;
+  }
+  .common p {
+    font-size: 16px;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .common .textBlock {
-    padding: 100px 0 0 120px;
+    padding: 120px 0px 0px 10px;
+  }
+  .common p {
+    font-size: 17px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .common .textBlock {
-    padding: 100px 0 0 200px;
+    padding: 120px 0px 0px 20px;
+  }
+  .common p {
+    font-size: 18px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .common .textBlock {
-    padding: 100px 0 0 300px;
+    padding: 120px 0px 0px 30px;
+  }
+  .common p {
+    font-size: 19px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .common .textBlock {
-    padding: 100px 0 0 450px;
+    padding: 120px 0px 0px 75px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .common .textBlock {
+    padding: 120px 0px 0px 150px;
+  }
+  .common p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .common .textBlock {
+    padding: 120px 0px 0px 350px;
+  }
+  .common p {
+    font-size: 20px;
   }
 }

@@ -50,7 +50,7 @@ export const fightSlice = createSlice({
         state.thorvald.XP += enemy.XP;
         enemy.fullHP = enemy.maxHP;
         enemy.level += 1;
-        /* enemy.armor += 1; Uncomment */
+        enemy.armor += 1;
       }
 
       if (thorvald.XP >= thorvald.levelsScore) {

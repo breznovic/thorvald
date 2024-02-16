@@ -33,7 +33,7 @@ export const enemies: FighterType[] = [
   {
     id: nanoid(8),
     name: "Warrior",
-    strength: 4,
+    strength: 3,
     fullHP: 30,
     maxHP: 30,
     armor: 3,
@@ -46,7 +46,7 @@ export const enemies: FighterType[] = [
   {
     id: nanoid(8),
     name: "Knight",
-    strength: 5,
+    strength: 4,
     fullHP: 50,
     maxHP: 50,
     armor: 5,
@@ -60,7 +60,7 @@ export const enemies: FighterType[] = [
   {
     id: nanoid(8),
     name: "Guardsman",
-    strength: 7,
+    strength: 5,
     fullHP: 70,
     maxHP: 70,
     armor: 8,

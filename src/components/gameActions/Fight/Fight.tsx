@@ -36,7 +36,7 @@ export const Fight = () => {
       {showModal && (
         <div className={s.modal}>
           <div className={s.modalContent}>
-            <p>Tap on the image of the enemy to hit them!</p>
+            <p>Tap on the image of the enemy to hit him!</p>
             <button onClick={modalClose}>Ok</button>
           </div>
         </div>

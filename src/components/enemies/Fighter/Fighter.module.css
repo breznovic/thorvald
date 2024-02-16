@@ -17,6 +17,8 @@
   color: saddlebrown;
   margin-top: 3px;
   font-family: "Gothic A1", sans-serif;
+  animation: colorChangeAnimation 1s infinite;
+  transition: transform 0.5s;
 }
 
 .image {
@@ -37,6 +39,21 @@
 
 .image:hover {
   animation: wobble 1s 1;
+}
+
+@keyframes colorChangeAnimation {
+  0% {
+    color: red;
+    transform: scale(1);
+  }
+  50% {
+    color: blue;
+    transform: scale(1.2);
+  }
+  100% {
+    color: red;
+    transform: scale(1);
+  }
 }
 
 @keyframes wobble {

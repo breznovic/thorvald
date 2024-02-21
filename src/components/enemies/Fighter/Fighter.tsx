@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { FighterType, Thorvald } from "../../../common/types/types";
 import { hitEnemy } from "../../../features/fightSlice";
 import { FighterImage } from "./FighterImage";
+import { useEffect } from "react";
 
 type PropsType = {
   fighter: FighterType | Thorvald;

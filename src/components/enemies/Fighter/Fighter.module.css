@@ -25,6 +25,7 @@
   margin-top: 3px;
   font-family: "Gothic A1", sans-serif;
   animation: colorChangeAnimation 1s infinite;
+  animation-iteration-count: 1;
   transition: transform 0.5s;
 }
 

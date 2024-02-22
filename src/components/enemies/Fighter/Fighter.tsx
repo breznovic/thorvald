@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { FighterType, Thorvald } from "../../../common/types/types";
 import { hitEnemy } from "../../../features/fightSlice";
 import { FighterImage } from "./FighterImage";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type PropsType = {
   fighter: FighterType | Thorvald;
@@ -12,7 +12,23 @@ type PropsType = {
 
 export const Fighter = (props: PropsType) => {
   let thorvald = useSelector((state: RootState) => state.fight.thorvald);
+  const fighterLevel = useSelector(
+    (state: RootState) => state.fight.enemiesForFight.level
+  );
+  const thorvaldLevel = useSelector(
+    (state: RootState) => state.fight.thorvald.level
+  );
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (fighterLevel > 1 || thorvaldLevel > 1) {
+      setAnimateClass(s.animate);
+    } else {
+      setAnimateClass(s.line);
+    }
+  }, [fighterLevel, thorvaldLevel]);
+
+  const [animateClass, setAnimateClass] = useState("");
 
   const handleClick = () => {
     dispatch(hitEnemy(props.fighter));
@@ -23,7 +39,9 @@ export const Fighter = (props: PropsType) => {
       {props.fighter.isDead === false ? (
         <div className={s.fighter}>
           <div className={s.line}>{props.fighter?.name}</div>
-          <div className={s.line}>Level: {props.fighter?.level}</div>
+          <div className={`${s.line} ${animateClass}`}>
+            Level: {props.fighter?.level}
+          </div>
           <div className={s.line}>
             XP: {props.fighter.XP}
             {props.fighter.name === "Thorvald"

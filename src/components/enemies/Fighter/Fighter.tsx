@@ -15,18 +15,12 @@ export const Fighter = (props: PropsType) => {
   const fighterLevel = useSelector(
     (state: RootState) => state.fight.enemiesForFight.level
   );
-  const thorvaldLevel = useSelector(
-    (state: RootState) => state.fight.thorvald.level
-  );
+
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (fighterLevel > 1 || thorvaldLevel > 1) {
-      setAnimateClass(s.animate);
-    } else {
-      setAnimateClass(s.line);
-    }
-  }, [fighterLevel, thorvaldLevel]);
+    fighterLevel >= 1 ? setAnimateClass(s.animate) : setAnimateClass(s.line);
+  }, [fighterLevel]);
 
   const [animateClass, setAnimateClass] = useState("");
 
@@ -38,7 +32,9 @@ export const Fighter = (props: PropsType) => {
     <>
       {props.fighter.isDead === false ? (
         <div className={s.fighter}>
-          <div className={s.line}>{props.fighter?.name}</div>
+          <div className={`${s.line} ${animateClass}`}>
+            {props.fighter?.name}
+          </div>
           <div className={`${s.line} ${animateClass}`}>
             Level: {props.fighter?.level}
           </div>

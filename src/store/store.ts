@@ -1,12 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import fightReducer from "../features/fightSlice";
-import thorvaldReducer from "../features/thorvaldSlice";
 import { useDispatch } from "react-redux";
 
 export const store = configureStore({
   reducer: {
     fight: fightReducer,
-    thorvald: thorvaldReducer,
   },
 });
 

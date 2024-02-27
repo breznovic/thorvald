@@ -25,7 +25,7 @@ export const Fighter = (props: PropsType) => {
   const [animateClass, setAnimateClass] = useState("");
 
   const handleClick = () => {
-    dispatch(hitEnemy(props.fighter));
+    dispatch(hitEnemy());
   };
 
   return (

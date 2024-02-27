@@ -1,4 +1,4 @@
-import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { FighterType, Thorvald } from "../common/types/types";
 import { enemies } from "./../store/enemies";
 
@@ -36,7 +36,7 @@ export const fightSlice = createSlice({
   name: "fight",
   initialState,
   reducers: {
-    hitEnemy: (state, action: PayloadAction<FighterType>) => {
+    hitEnemy: (state) => {
       let enemy = state.enemiesForFight;
       const thorvald = state.thorvald;
       const enemyArmor = enemy.armor;
@@ -67,7 +67,7 @@ export const fightSlice = createSlice({
         state.enemiesForFight = enemies[nextIndex];
       }
     },
-    clickOnDeadEnemy: (state, action: PayloadAction<FighterType>) => {
+    clickOnDeadEnemy: (state) => {
       let enemy = state.enemiesForFight;
       enemy.isDead = false;
     },

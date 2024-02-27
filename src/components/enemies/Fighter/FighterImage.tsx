@@ -13,7 +13,7 @@ export const FighterImage = (props: PropsType) => {
   const dispatch = useAppDispatch();
 
   const clickedDeadEnemy = () => {
-    dispatch(clickOnDeadEnemy(props.fighter));
+    dispatch(clickOnDeadEnemy());
   };
 
   switch (props.fighter?.name) {

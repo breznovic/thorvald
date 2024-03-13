@@ -8,7 +8,7 @@ img {
   background-image: url("https://www.nordicvisitor.com/images/lapland/snowy-trees-sunset-rovaniemi%C2%A9visitrovaniemi.fi.jpg");
   display: flex;
   flex-direction: column;
-  min-height: 94.6vh;
+  min-height: 93.6vh;
 }
 
 @keyframes slideIn {
@@ -22,18 +22,23 @@ img {
 
 .header {
   background-color: salmon;
-  min-height: 35px;
+  max-height: 30px;
   font-family: "Gothic A1", sans-serif;
   color: #333333;
-  padding-top: 15px;
+  padding: 15px;
   font-size: 20px;
   opacity: 0.89;
-  text-align: center;
   animation: slideIn 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
 }
 
 .button {
-  position: relative;
+  margin: 0px auto 0px auto;
+  text-wrap: nowrap;
 }
 
 .modal {
@@ -62,46 +67,83 @@ img {
 
 @media only screen and (max-width: 600px) {
   .button {
-    margin: -30px 0px 0px 360px;
-    padding: 0px;
+    margin: 0px auto 0px auto;
+  }
+  .title {
+    margin: 0px auto 0px 120px;
+    text-wrap: nowrap;
   }
   .modalContent {
-    margin: 200px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
     padding: auto;
   }
 }
 
 @media only screen and (min-width: 600px) {
+ 
   .button {
-    margin: -30px 0px 0px 400px;
+    margin: 0px auto 0px auto;
+  }
+  .title {
+    margin: 0px auto 0px 260px;
+    text-wrap: nowrap;
   }
   .modalContent {
-    margin: 200px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
     padding: auto;
   }
 }
 
 @media only screen and (min-width: 768px) {
+ 
   .button {
-    margin: -30px 0px 0px 500px;
+    margin: 0px auto 0px auto;
+  }
+  .title {
+    margin: 0px auto 0px 365px;
+    text-wrap: nowrap;
   }
   .modalContent {
-    margin: 200px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
   }
 }
 
 @media only screen and (min-width: 992px) {
+
   .button {
-    margin: -30px 0px 0px 700px;
+    margin: 0px auto 0px auto;
+  }
+  .title {
+    margin: 0px auto 0px 465px;
+    text-wrap: nowrap;
   }
   .modalContent {
-    margin: 200px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
+
   .button {
-    margin: -30px 0px 0px 1060px;
+    margin: 0px auto 0px auto;
+  }
+  .title {
+    margin: 0px auto 0px 630px;
+    text-wrap: nowrap;
+  }
+  .modalContent {
+    margin: 0px 0px 50px 0px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  
+  .button {
+    margin: 0px auto 0px auto;
+  }
+  .title {
+    margin: 0px auto 0px 790px;
+    text-wrap: nowrap;
   }
   .modalContent {
     margin: 0px 0px 50px 0px;

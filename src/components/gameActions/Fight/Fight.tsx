@@ -42,7 +42,9 @@ export const Fight = () => {
         </div>
       )}
       <div className={s.header}>
-        <Header title="Chapter I: In the woods" />
+        <div className={s.title}>
+          <Header title="Chapter I: In the woods" />
+        </div>
         <div className={s.button}>
           <Button title="Exit the game" url="/main"></Button>
         </div>

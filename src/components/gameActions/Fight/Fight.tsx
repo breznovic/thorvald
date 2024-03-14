@@ -4,8 +4,6 @@ import { RootState, useAppDispatch } from "../../../store/store";
 import { useEffect, useState } from "react";
 import { setEnemyForFight } from "../../../features/fightSlice";
 import { useSelector } from "react-redux";
-import Button from "../../../common/button/Button";
-import { Header } from "../../header/Header";
 import { useNavigate } from "react-router-dom";
 
 export const Fight = () => {
@@ -27,6 +25,8 @@ export const Fight = () => {
     navigate("/final");
   }
 
+  const handleClick = () => navigate("/main");
+
   const [showModal, setShowModal] = useState(true);
 
   const modalClose = () => setShowModal(false);
@@ -41,17 +41,17 @@ export const Fight = () => {
           </div>
         </div>
       )}
-      <div className={s.header}>
-        <div className={s.title}>
-          <Header title="Chapter I: In the woods" />
+      <div className={s.main}>
+        <div className={s.header}>
+          <div className={s.title}>Chapter I: In the woods</div>
+          <button onClick={handleClick} className={s.button}>
+            Exit the game
+          </button>
         </div>
-        <div className={s.button}>
-          <Button title="Exit the game" url="/main"></Button>
+        <div className={s.fight}>
+          <Fighter fighter={thorvald} />
+          <Fighter fighter={enemyForFight} />
         </div>
-      </div>
-      <div className={s.fight}>
-        <Fighter fighter={thorvald} />
-        <Fighter fighter={enemyForFight} />
       </div>
     </>
   );

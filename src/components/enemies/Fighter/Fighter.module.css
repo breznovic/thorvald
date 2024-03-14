@@ -108,3 +108,51 @@
   margin-top: 3px;
   font-family: "Gothic A1", sans-serif;
 }
+
+@media only screen and (max-device-width: 375px) and (max-device-height: 667px) {
+  .fighter {
+    width: 200px;
+    margin: 12px auto 0px auto;
+    min-height: 200px;
+  }
+}
+
+@media only screen and (max-device-width: 414px) and (max-device-height: 896px) {
+  .fighter {
+    width: 350px;
+    margin: 12px auto 0px auto;
+    min-height: 380px;
+  }
+}
+
+@media only screen and (max-device-width: 390px) and (max-device-height: 844px) {
+  .fighter {
+    width: 350px;
+    margin: 12px auto 0px auto;
+    min-height: 360px;
+  }
+}
+
+@media only screen and (max-device-width: 430px) and (max-device-height: 932px) {
+  .fighter {
+    width: 350px;
+    margin: 12px auto 0px auto;
+    min-height: 380px;
+  }
+}
+
+@media only screen and (max-device-width: 360px) and (max-device-height: 740px) {
+  .fighter {
+    width: 300px;
+    margin: 6px auto 0px auto;
+    min-height: 260px;
+  }
+}
+
+@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+  .fighter {
+    width: 300px;
+    margin: 6px auto 0px auto;
+    min-height: 385px;
+  }
+}

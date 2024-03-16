@@ -41,20 +41,22 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  width: 100%; 
-  margin-top: 0; 
-  position: absolute; 
-  top: 0; 
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
 }
 
-.title {
-  white-space: nowrap;
-  max-width: 100px;
+header {
+  flex: 1;
+  text-align: center;
+  margin-left: 80px;
 }
 
 .button {
-  margin-right: 10px;
+  margin-right: 0px 10px 0px auto;
   display: inline-block;
   padding: 10px;
   background-color: #f2f2f2;
@@ -96,141 +98,40 @@ img {
   background-color: rgb(192, 192, 137);
 }
 
-@media only screen and (max-device-width: 375px) and (max-device-height: 667px) {
-  .header {
-    position: static;
+@media only screen and (max-width: 375px) {
+  .main {
+    max-height: 667px;
   }
-}
 
-@media only screen and (max-device-width: 414px) and (max-device-height: 896px) {
   .header {
     font-size: 15px;
-    gap: 5px;
+    gap: 10px;
+    justify-content: flex-start;
   }
 
   .button {
-    margin: 0px auto 0px 20px;
-    font-size: 15px;
+    padding: 5px;
   }
 
-  .modalContent {
-    margin: 100px 0px 0px 0px;
+  .fight {
+    margin-top: 40px;
+  }
+
+  img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
   }
 }
 
-@media only screen and (max-device-width: 360px) and (max-device-height: 740px) {
-  .header {
-    font-size: 13.5px;
-    gap: 5px;
-  }
-
-  .button {
-    margin: 0px auto 0px 20px;
-    font-size: 15px;
-  }
-
-  .modalContent {
-    margin: 100px 0px 0px 0px;
-  }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
 }
 
-@media only screen and (max-device-width: 412px) and (max-device-height: 915px) {
-  .header {
-    font-size: 13.5px;
-    gap: 5px;
-  }
-
-  .button {
-    margin: 0px auto 0px 20px;
-    font-size: 15px;
-  }
-
-  .modalContent {
-    margin: 100px 0px 0px 0px;
-  }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
 }
 
-@media only screen and (max-width: 600px) {
-  .button {
-    margin: 0px 20px 0px auto;
-  }
-  .title {
-    margin: 0px auto 0px 120px;
-  }
-  .modalContent {
-    margin: 100px 0px 0px 0px;
-    padding: auto;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .button {
-    margin: 0px auto 0px auto;
-  }
-  .title {
-    margin: 0px auto 0px 260px;
-  }
-  .modalContent {
-    margin: 100px 0px 0px 0px;
-    padding: auto;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .button {
-    margin: 0px auto 0px auto;
-  }
-  .title {
-    margin: 0px auto 0px 365px;
-  }
-  .modalContent {
-    margin: 100px 0px 0px 0px;
-  }
-}
-
-@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
-  .header {
-    gap: 60px;
-  }
-
-  .title {
-    margin-left: 400px;
-  }
-
-  .button {
-    margin: 0px 200px 0px 20px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .button {
-    margin: 0px auto 0px auto;
-  }
-  .title {
-    margin: 0px auto 0px 465px;
-  }
-  .modalContent {
-    margin: 100px 0px 0px 0px;
-  }
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
 }
 
 @media only screen and (min-width: 1200px) {
-  .button {
-    margin: 0px auto 0px auto;
-  }
-  .title {
-    margin: 0px auto 0px 630px;
-  }
-  .modalContent {
-    margin: 0px 0px 50px 0px;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  .title {
-    margin: 0px auto 0px 790px;
-  }
-  .modalContent {
-    margin: 0px 0px 50px 0px;
-  }
 }

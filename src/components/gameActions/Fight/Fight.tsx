@@ -43,7 +43,7 @@ export const Fight = () => {
       )}
       <div className={s.main}>
         <div className={s.header}>
-          <div className={s.title}>Chapter I: In the woods</div>
+          <header>Chapter I: In the woods</header>
           <button onClick={handleClick} className={s.button}>
             Exit the game
           </button>

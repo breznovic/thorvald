@@ -4,8 +4,13 @@
   background-image: linear-gradient(to bottom, #1b4332, #2d6a4f);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 94.6vh;
+  min-height: 73.1vh;
   color: #ffffffc2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 19px;
+  padding-top: 200px;
 }
 
 .common .button {
@@ -13,7 +18,7 @@
   margin-top: 50px;
 }
 .common p {
-  margin: 5px 0px 0px auto;
+  margin: 10px 0px 0px auto;
   padding: 2px;
   font-family: "Gothic A1", sans-serif;
   overflow: hidden;
@@ -43,64 +48,37 @@
   background-repeat: no-repeat;
   background-size: cover;
   animation: slideIn 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
 }
 
-@media only screen and (max-width: 600px) {
-  .common .textBlock {
-    padding: 100px 0px 0px 8px;
-  }
-  .common p {
-    font-size: 16px;
-  }
+.header header {
+  margin-right: 100px;
 }
 
-@media only screen and (min-width: 600px) {
-  .common .textBlock {
-    padding: 120px 0px 0px 10px;
-  }
-  .common p {
-    font-size: 17px;
+@media only screen and (max-width: 375px) {
+  .common {
+    padding: 100px 0px 0px 20px;
+    min-height: 77.5vh;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .common .textBlock {
-    padding: 120px 0px 0px 20px;
-  }
-  .common p {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .common .textBlock {
-    padding: 120px 0px 0px 30px;
-  }
-  .common p {
-    font-size: 19px;
+@media only screen and (max-width: 575.98px) {
+  .header header {
+    margin-left: 110px;
+    width: 50%;
+    text-wrap: nowrap;
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .common .textBlock {
-    padding: 120px 0px 0px 75px;
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .textBlock {
+    width: 90%;
   }
 }
 
-@media only screen and (min-width: 1400px) {
-  .common .textBlock {
-    padding: 120px 0px 0px 150px;
-  }
-  .common p {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  .common .textBlock {
-    padding: 120px 0px 0px 350px;
-  }
-  .common p {
-    font-size: 20px;
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .textBlock {
+    width: 90%;
   }
 }

@@ -1,14 +1,22 @@
-.common {
+.container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.common {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 150px;
   flex-direction: column;
   text-align: center;
   background-color: #1b4332;
   background-image: linear-gradient(to bottom, #1b4332, #2d6a4f);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 94.6vh;
+  min-height: 78.5vh;
   color: #ffffffc2;
 }
 
@@ -40,7 +48,7 @@
 
 .items {
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .sword {
@@ -72,6 +80,7 @@
 
 .header {
   background-color: #4e6a52;
+  width: 100%;
   min-height: 35px;
   font-family: "Gothic A1", sans-serif;
   color: #ffffff;
@@ -85,63 +94,28 @@
   animation: emerge 0.3s ease-in-out forwards;
 }
 
-/* @media only screen and (max-width: 600px) {
-  .common .textBlock {
-    padding: 60px 0 0 20px;
-    background-color: violet;
+.header header {
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 375px) {
+  .header header {
+    margin-right: 80px;
   }
-  .sword {
-    padding: 30px 10px 0px 150px;
+
+  .common {
+    padding-top: 50px;
+    min-height: 84.5vh;
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .common .textBlock {
-    padding: 70px 0 0 30px;
-    background-color: rgb(47, 0, 255);
+@media only screen and (max-width: 575.98px) {
+  .header header {
+    margin-right: 80px;
   }
-  .sword {
-    padding: 30px 10px 0px 250px;
-  }
-}
 
-@media only screen and (min-width: 768px) {
-  .common .textBlock {
-    padding: 80px 0 0 50px;
-    background-color: grey;
-  }
-  .sword {
-    padding: 30px 10px 0px 350px;
+  .common {
+    padding-top: 50px;
+    min-height: 89.5vh;
   }
 }
-
-@media only screen and (min-width: 992px) {
-  .common .textBlock {
-    padding: 80px 0 0 60px;
-    background-color: yellowgreen;
-  }
-  .sword {
-    padding: 30px 10px 0px 500px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .common .textBlock {
-    padding: 80px 0 0 150px;
-    background-color: yellow;
-  }
-  .sword {
-    padding: 30px 10px 0px 670px;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  .common .textBlock {
-    padding: 80px 0 0 150px;
-    background-color: red;
-  }
-  .sword {
-    padding: 30px 10px 0px 670px;
-  }
-}
- */

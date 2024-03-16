@@ -6,6 +6,10 @@
   border-radius: 12%;
   min-height: 410px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .line {
@@ -109,50 +113,36 @@
   font-family: "Gothic A1", sans-serif;
 }
 
-@media only screen and (max-device-width: 375px) and (max-device-height: 667px) {
+@media only screen and (max-width: 375px) {
   .fighter {
-    width: 200px;
-    margin: 12px auto 0px auto;
-    min-height: 200px;
+    width: 280px;
+    min-height: 250px;
+  }
+
+  .line {
+    margin-top: 5px;
   }
 }
 
-@media only screen and (max-device-width: 414px) and (max-device-height: 896px) {
+@media only screen and (max-width: 575.98px) {
   .fighter {
-    width: 350px;
-    margin: 12px auto 0px auto;
-    min-height: 380px;
+    width: 280px;
+    min-height: 250px;
+  }
+
+  .line {
+    margin-top: 5px;
   }
 }
 
-@media only screen and (max-device-width: 390px) and (max-device-height: 844px) {
-  .fighter {
-    width: 350px;
-    margin: 12px auto 0px auto;
-    min-height: 360px;
-  }
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
 }
 
-@media only screen and (max-device-width: 430px) and (max-device-height: 932px) {
-  .fighter {
-    width: 350px;
-    margin: 12px auto 0px auto;
-    min-height: 380px;
-  }
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
 }
 
-@media only screen and (max-device-width: 360px) and (max-device-height: 740px) {
-  .fighter {
-    width: 300px;
-    margin: 6px auto 0px auto;
-    min-height: 260px;
-  }
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
 }
 
-@media only screen and (max-device-width: 768px) and (max-device-height: 1024px) {
-  .fighter {
-    width: 300px;
-    margin: 6px auto 0px auto;
-    min-height: 385px;
-  }
+@media only screen and (min-width: 1200px) {
 }

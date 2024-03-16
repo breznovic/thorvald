@@ -9,29 +9,41 @@
   }
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .header {
+  width: 100%;
   background-color: #4e6a52;
-  min-height: 35px;
   font-family: "Gothic A1", sans-serif;
   color: #ffffff;
-  padding-top: 15px;
+  height: 50px;
   font-size: 20px;
   opacity: 0.89;
-  text-align: center;
   background-image: linear-gradient(to bottom, #4e6a52, #143b28);
   background-repeat: no-repeat;
   background-size: cover;
   animation: emerge 1s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header header {
+  margin-right: 100px;
 }
 
 .common {
-  text-align: center;
-  background-color: #1b4332;
+  width: 100%;
   background-image: url("../../images/swamp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 94.6vh;
-  color: #ffffffc2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,4 +51,12 @@
 
 .common .button {
   margin-bottom: 250px;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .header header {
+    margin-left: 110px;
+    width: 50%;
+    text-wrap: nowrap;
+  }
 }

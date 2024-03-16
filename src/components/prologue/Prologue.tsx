@@ -1,18 +1,17 @@
 import s from "./Prologue.module.css";
 import Button from "../../common/button/Button";
-import { Header } from "../header/Header";
 
 const Prologue = () => {
   return (
     <>
       <div className={s.header}>
-        <Header title="Prologue" />
+        <header>Prologue</header>
       </div>
       <div className={s.common}>
         <div className={s.textBlock}>
           <p>
-            Troll Thorvald was in his usual winter hibernation in swamp. But this
-            time something woke him up prematurely.{" "}
+            Troll Thorvald was in his usual winter hibernation in swamp. But
+            this time something woke him up prematurely.
           </p>
           <p>
             Familiar frogs informed him that the king had gone hunting with his

@@ -1,6 +1,5 @@
 import s from "./Final.module.css";
 import Button from "../../common/button/Button";
-import { Header } from "../header/Header";
 import sword from "../../images/sword.png";
 
 const content = [
@@ -13,9 +12,9 @@ const content = [
 
 const Final = () => {
   return (
-    <>
+    <div className={s.container}>
       <div className={s.header}>
-        <Header title="To be continued..." />
+        <header>To be continued...</header>
       </div>
       <div className={s.common}>
         <div className={s.textBlock}>
@@ -36,7 +35,7 @@ const Final = () => {
           <Button title="Exit the game" url="/main"></Button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

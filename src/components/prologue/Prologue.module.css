@@ -63,11 +63,21 @@
   }
 }
 
+@media only screen and (max-width: 390px) {
+  .common {
+    padding: 100px 0px 0px 20px;
+    min-height: 82.1vh;
+  }
+}
+
 @media only screen and (max-width: 575.98px) {
   .header header {
     margin-left: 110px;
     width: 50%;
     text-wrap: nowrap;
+  }
+  .textBlock {
+    width: 90%;
   }
 }
 

@@ -2,9 +2,9 @@ import s from "./Fighter.module.css";
 import { RootState, useAppDispatch } from "../../../store/store";
 import { useSelector } from "react-redux";
 import { FighterType, Thorvald } from "../../../common/types/types";
-import { hitEnemy } from "../../../features/fightSlice";
-import { FighterImage } from "./FighterImage";
+import { clickOnDeadEnemy, hitEnemy } from "../../../features/fightSlice";
 import { useEffect, useState } from "react";
+import death from "../../../images/death.jpg";
 
 type PropsType = {
   fighter: FighterType | Thorvald;
@@ -23,6 +23,10 @@ export const Fighter = (props: PropsType) => {
   }, [fighterLevel]);
 
   const [animateClass, setAnimateClass] = useState("");
+
+  const clickedDeadEnemy = () => {
+    dispatch(clickOnDeadEnemy());
+  };
 
   const handleClick = () => {
     dispatch(hitEnemy());
@@ -44,7 +48,15 @@ export const Fighter = (props: PropsType) => {
               ? "/" + thorvald.levelsScore
               : ""}
           </div>
-          <FighterImage fighter={props.fighter} handleClick={handleClick} />
+          {props.fighter.name === "Thorvald" ? (
+            <img src={props.fighter.avatar} className={s.image} />
+          ) : (
+            <img
+              src={props.fighter.avatar}
+              className={s.image}
+              onClick={handleClick}
+            />
+          )}
           <div className={s.line}>Strength: {props.fighter?.strength}</div>
           <div className={s.line}>Armor: {props.fighter?.armor}</div>
           <div className={s.line}>HP: {props.fighter?.fullHP}</div>
@@ -53,7 +65,7 @@ export const Fighter = (props: PropsType) => {
         <div className={s.fighter}>
           <div className={s.deadEnemyBlock}>
             <div className={s.line}>Enemy is dead!</div>
-            <FighterImage fighter={props.fighter} handleClick={handleClick} />
+            <img src={death} className={s.image} onClick={clickedDeadEnemy} />
             <div className={s.line}>Click to fight another foe!</div>
           </div>
         </div>

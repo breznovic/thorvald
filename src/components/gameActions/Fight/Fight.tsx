@@ -2,7 +2,7 @@ import { Fighter } from "../../enemies/Fighter/Fighter";
 import s from "./Fight.module.css";
 import { RootState, useAppDispatch } from "../../../store/store";
 import { useEffect, useState } from "react";
-import { setEnemyForFight } from "../../../features/fightSlice";
+import { resetEnemy, setEnemyForFight } from "../../../features/fightSlice";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -25,7 +25,10 @@ export const Fight = () => {
     navigate("/final");
   }
 
-  const handleClick = () => navigate("/main");
+  const handleClick = () => {
+    dispatch(resetEnemy());
+    navigate("/main");
+  };
 
   const [showModal, setShowModal] = useState(true);
 

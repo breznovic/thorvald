@@ -71,9 +71,12 @@ export const fightSlice = createSlice({
       let enemy = state.enemiesForFight;
       enemy.isDead = false;
     },
+    resetEnemy: (state) => {
+      state.enemiesForFight = enemies[0];
+    },
   },
 });
 
-export const { hitEnemy, clickOnDeadEnemy } = fightSlice.actions;
+export const { hitEnemy, clickOnDeadEnemy, resetEnemy } = fightSlice.actions;
 
 export default fightSlice.reducer;

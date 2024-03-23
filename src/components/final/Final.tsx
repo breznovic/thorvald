@@ -1,6 +1,8 @@
 import s from "./Final.module.css";
-import Button from "../../common/button/Button";
 import sword from "../../images/sword.png";
+import { resetEnemy } from "../../features/fightSlice";
+import { useAppDispatch } from "../../store/store";
+import { useNavigate } from "react-router-dom";
 
 const content = [
   "New chapters",
@@ -11,6 +13,16 @@ const content = [
 ];
 
 const Final = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const reset = () => {
+    dispatch(resetEnemy());
+    navigate("/main");
+  };
+
+  console.log(reset);
+
   return (
     <div className={s.container}>
       <div className={s.header}>
@@ -31,9 +43,9 @@ const Final = () => {
             ))}
           </div>
         </div>
-        <div className={s.button}>
-          <Button title="Exit the game" url="/main"></Button>
-        </div>
+        <button className={s.button} onClick={reset}>
+          Exit the game
+        </button>
       </div>
     </div>
   );

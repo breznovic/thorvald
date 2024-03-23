@@ -68,8 +68,7 @@ export const fightSlice = createSlice({
       }
     },
     clickOnDeadEnemy: (state) => {
-      let enemy = state.enemiesForFight;
-      enemy.isDead = false;
+      state.enemiesForFight.isDead = false;
     },
     resetEnemy: (state) => {
       state.enemiesForFight = enemies[0];

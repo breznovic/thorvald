@@ -1,5 +1,6 @@
-import s from "./Main.module.css";
 import Button from "../../common/button/Button";
+import s from "./Main.module.css";
+
 
 const Main = () => {
   return (

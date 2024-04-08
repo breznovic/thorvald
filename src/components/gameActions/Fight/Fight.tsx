@@ -2,13 +2,17 @@ import { Fighter } from "../../enemies/Fighter/Fighter";
 import s from "./Fight.module.css";
 import { RootState, useAppDispatch } from "../../../store/store";
 import { useEffect, useState } from "react";
-import { resetEnemy, setEnemyForFight } from "../../../features/fightSlice";
+import {
+  getEnemiesForFight,
+  getThorvald,
+  resetEnemy,
+} from "../../../features/fightSlice";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 export const Fight = () => {
   let enemyForFight = useSelector(
-    (state: RootState) => state.fight.enemiesForFight
+    (state: RootState) => state.fight.battleEnemy
   );
 
   const thorvald = useSelector((state: RootState) => state.fight.thorvald);
@@ -18,10 +22,11 @@ export const Fight = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(setEnemyForFight());
+    dispatch(getEnemiesForFight());
+    dispatch(getThorvald());
   }, [dispatch]);
 
-  if (enemyForFight.name === "Final") {
+  if (enemyForFight && enemyForFight.name === "Final") {
     navigate("/final");
   }
 

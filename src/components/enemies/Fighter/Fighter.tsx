@@ -7,19 +7,21 @@ import { useEffect, useState } from "react";
 import death from "../../../images/death.jpg";
 
 type PropsType = {
-  fighter: FighterType | Thorvald;
+  fighter: FighterType | Thorvald | null;
 };
 
 export const Fighter = (props: PropsType) => {
   let thorvald = useSelector((state: RootState) => state.fight.thorvald);
   const fighterLevel = useSelector(
-    (state: RootState) => state.fight.enemiesForFight.level
+    (state: RootState) => state.fight.battleEnemy?.level
   );
 
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    fighterLevel >= 1 ? setAnimateClass(s.animate) : setAnimateClass(s.line);
+    if (fighterLevel) {
+      fighterLevel >= 1 ? setAnimateClass(s.animate) : setAnimateClass(s.line);
+    }
   }, [fighterLevel]);
 
   const [animateClass, setAnimateClass] = useState("");
@@ -34,7 +36,7 @@ export const Fighter = (props: PropsType) => {
 
   return (
     <>
-      {props.fighter.isDead === false ? (
+      {props.fighter?.isDead === false ? (
         <div className={s.fighter}>
           <div className={`${s.line} ${animateClass}`}>
             {props.fighter?.name}
@@ -44,7 +46,7 @@ export const Fighter = (props: PropsType) => {
           </div>
           <div className={s.line}>
             XP: {props.fighter.XP}
-            {props.fighter.name === "Thorvald"
+            {thorvald && props.fighter.name === "Thorvald"
               ? "/" + thorvald.levelsScore
               : ""}
           </div>

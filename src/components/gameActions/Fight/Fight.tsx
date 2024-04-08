@@ -44,7 +44,14 @@ export const Fight = () => {
       {showModal && (
         <div className={s.modal}>
           <div className={s.modalContent}>
-            <p>Tap on the image of the enemy to hit him!</p>
+            {/*  <p>Tap on the image of the enemy to hit him!</p> */}
+            <p>
+              I apologize, but right now I am in the process of learning how to
+              connect the{" "}
+              <a href="https://github.com/breznovic/thorvald_api">API</a> I have
+              written.
+            </p>
+            <p>However, you can still review my code by <a href="https://github.com/breznovic/thorvald">click here</a></p>
             <button onClick={modalClose}>Ok</button>
           </div>
         </div>

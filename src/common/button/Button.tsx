@@ -1,7 +1,6 @@
-import s from "./Button.module.css"
+import s from "./Button.module.css";
 import { useNavigate } from "react-router-dom";
 import { TitleType } from "../types/types";
-
 
 const Button = (props: TitleType & { url: string }) => {
   const navigate = useNavigate();

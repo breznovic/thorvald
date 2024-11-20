@@ -4,7 +4,7 @@
   background-image: linear-gradient(to bottom, #1b4332, #2d6a4f);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 73.2vh;
+  min-height: 85.2vh;
   color: #ffffffc2;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
   margin-top: 50px;
 }
 .common p {
-  margin: 10px 0px 0px auto;
+  margin: 10px 10px 0px 20px;
   padding: 2px;
   font-family: "Gothic A1", sans-serif;
   overflow: hidden;
@@ -48,47 +48,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   animation: slideIn 0.3s ease-in-out;
-  display: flex;
-  justify-content: center;
 }
 
 .header header {
-  margin-right: 100px;
+  margin: 0;
 }
 
-@media only screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .common {
-    padding: 100px 0px 0px 20px;
-    min-height: 77.5vh;
-  }
-}
-
-@media only screen and (max-width: 390px) {
-  .common {
-    padding: 100px 0px 0px 20px;
-    min-height: 82.1vh;
-  }
-}
-
-@media only screen and (max-width: 575.98px) {
-  .header header {
-    margin-left: 110px;
-    width: 50%;
-    text-wrap: nowrap;
-  }
-  .textBlock {
-    width: 90%;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767.98px) {
-  .textBlock {
-    width: 90%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .textBlock {
-    width: 90%;
+    padding-top: 100px;
   }
 }

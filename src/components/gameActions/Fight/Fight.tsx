@@ -44,17 +44,17 @@ export const Fight = () => {
           </div>
         </div>
       )}
-      <div className={s.main}>
-        <div className={s.header}>
+      <div className={s.header}>
+        <div className={s.wrapper}>
           <header>Chapter I: In the woods</header>
           <button onClick={handleClick} className={s.button}>
             Exit the game
           </button>
         </div>
-        <div className={s.fight}>
-          <Fighter fighter={thorvald} />
-          <Fighter fighter={enemyForFight} />
-        </div>
+      </div>
+      <div className={s.main}>
+        <Fighter fighter={thorvald} />
+        <Fighter fighter={enemyForFight} />
       </div>
     </>
   );

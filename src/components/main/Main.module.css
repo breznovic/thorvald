@@ -9,15 +9,7 @@
   }
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .header {
-  width: 100%;
   background-color: #4e6a52;
   font-family: "Gothic A1", sans-serif;
   color: #ffffff;
@@ -29,34 +21,35 @@
   background-size: cover;
   animation: emerge 1s forwards;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 }
 
 .header header {
-  margin-right: 100px;
+  margin: 0;
 }
 
 .common {
-  width: 100%;
   background-image: url("../../images/swamp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 94.6vh;
+  height: 95.1vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.common .button {
-  margin-bottom: 250px;
+.button {
+  position: relative;
+  top: 350px;
 }
 
-@media only screen and (max-width: 575.98px) {
-  .header header {
-    margin-left: 110px;
-    width: 50%;
-    text-wrap: nowrap;
+@media screen and (max-width: 640px) {
+  .common {
+    height: 92.5vh;
+  }
+
+  .button {
+    top: 300px;
   }
 }

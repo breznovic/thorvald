@@ -10,10 +10,6 @@
   background-repeat: no-repeat;
 }
 
-.fight {
-  margin-top: 40px;
-}
-
 img {
   height: 200px;
   width: 200px;
@@ -30,34 +26,28 @@ img {
 }
 
 .header {
-  box-sizing: border-box;
   background-color: salmon;
-  height: 50px;
   font-family: "Gothic A1", sans-serif;
   color: #333333;
-  padding: 15px;
   font-size: 20px;
   animation: slideIn 0.3s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper {
+  min-height: 55px;
+  width: 53%;
+  padding: 0px 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  margin-top: 0;
-  position: absolute;
-  top: 0;
   white-space: nowrap;
 }
 
-header {
-  flex: 1;
-  text-align: center;
-  margin-left: 80px;
-}
-
 .button {
-  margin-right: 0px 10px 0px auto;
-  display: inline-block;
+  margin: 0px 0px 0px 30px;
   padding: 10px;
   background-color: #f2f2f2;
   border: none;
@@ -98,93 +88,21 @@ header {
   background-color: rgb(192, 192, 137);
 }
 
-@media only screen and (max-width: 375px) {
-  .main {
-    max-height: 667px;
-  }
-
-  .header {
-    font-size: 15px;
-    gap: 10px;
-    justify-content: flex-start;
-  }
-
-  .button {
-    padding: 5px;
-  }
-
-  .fight {
-    margin-top: 40px;
-  }
-
-  img {
-    height: 130px;
-    width: 130px;
-    border-radius: 50%;
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    width: 55%;
   }
 }
 
-@media only screen and (max-width: 390px) {
-  .main {
-    max-height: 667px;
-  }
-
-  .header {
-    font-size: 17px;
-    gap: 10px;
-    justify-content: flex-start;
-  }
-
-  .button {
-    padding: 5px;
-  }
-
-  .fight {
-    margin-top: 40px;
-  }
-
-  img {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 57%;
   }
 }
 
-@media (max-width: 360px) and (max-height: 740px) {
-  .main {
-    max-height: 712px;
+@media screen and (max-width: 640px) {
+  .wrapper {
+    width: 90%;
+    padding: 0px 10px;
   }
-
-  .header {
-    font-size: 17px;
-    gap: 8px;
-    justify-content: space-between;
-  }
-
-  .button {
-    padding: 5px 3px;
-    font-size: 12px;
-  }
-
-  .fight {
-    margin-top: 40px;
-  }
-
-  img {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767.98px) {
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-}
-
-@media only screen and (min-width: 1200px) {
 }

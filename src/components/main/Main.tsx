@@ -1,10 +1,9 @@
 import Button from "../../common/button/Button";
 import s from "./Main.module.css";
 
-
 const Main = () => {
   return (
-    <div className={s.container}>
+    <>
       <div className={s.header}>
         <header>Thorvald's revenge</header>
       </div>
@@ -13,7 +12,7 @@ const Main = () => {
           <Button title="Start game" url="/prologue" />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

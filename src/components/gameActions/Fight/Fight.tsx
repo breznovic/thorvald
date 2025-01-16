@@ -1,5 +1,6 @@
 import { Fighter } from "../../enemies/Fighter/Fighter";
 import s from "./Fight.module.css";
+<<<<<<< HEAD
 import { RootState, useAppDispatch } from "../../../store/store";
 import { useEffect, useState } from "react";
 import {
@@ -8,9 +9,14 @@ import {
   resetEnemy,
 } from "../../../features/fightSlice";
 import { useSelector } from "react-redux";
+=======
+import { useState } from "react";
+>>>>>>> layout
 import { useNavigate } from "react-router-dom";
+import useFightStore from "../../../store/useFightStore";
 
 export const Fight = () => {
+<<<<<<< HEAD
   let enemyForFight = useSelector(
     (state: RootState) => state.fight.battleEnemy
   );
@@ -27,11 +33,19 @@ export const Fight = () => {
   }, [dispatch]);
 
   if (enemyForFight && enemyForFight.name === "Final") {
+=======
+  const { enemiesForFight, thorvald, resetEnemy } = useFightStore();
+  let enemyForFight = enemiesForFight;
+
+  const navigate = useNavigate();
+
+  if (enemyForFight.name === "Final") {
+>>>>>>> layout
     navigate("/final");
   }
 
   const handleClick = () => {
-    dispatch(resetEnemy());
+    resetEnemy();
     navigate("/main");
   };
 

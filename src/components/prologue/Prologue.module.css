@@ -4,7 +4,7 @@
   background-image: linear-gradient(to bottom, #1b4332, #2d6a4f);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 85.2vh;
+  min-height: 75.7vh;
   color: #ffffffc2;
   display: flex;
   align-items: center;
@@ -57,5 +57,6 @@
 @media screen and (max-width: 640px) {
   .common {
     padding-top: 100px;
+    min-height: 82.3vh;
   }
 }

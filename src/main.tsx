@@ -6,8 +6,6 @@ import { Fight } from "./components/gameActions/Fight/Fight.tsx";
 import Prologue from "./components/prologue/Prologue.tsx";
 import Main from "./components/main/Main.tsx";
 import Final from "./components/final/Final.tsx";
-import { Provider } from "react-redux";
-import { store } from "./store/store.ts";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +31,5 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <Provider store={store}>
-    <RouterProvider router={router} />
-  </Provider>
+  <RouterProvider router={router} />
 );

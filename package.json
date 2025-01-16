@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.0.1",
     "@types/jest": "^29.5.12",
+=======
+>>>>>>> layout
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^9.0.4",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@testing-library/react": "^14.2.2",

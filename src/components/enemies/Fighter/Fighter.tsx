@@ -1,22 +1,25 @@
 import s from "./Fighter.module.css";
-import { RootState, useAppDispatch } from "../../../store/store";
-import { useSelector } from "react-redux";
 import { FighterType, Thorvald } from "../../../common/types/types";
-import { clickOnDeadEnemy, hitEnemy } from "../../../features/fightSlice";
 import { useEffect, useState } from "react";
 import death from "../../../images/death.jpg";
+import useFightStore from "../../../store/useFightStore";
 
 type PropsType = {
   fighter: FighterType | Thorvald | null;
 };
 
 export const Fighter = (props: PropsType) => {
+<<<<<<< HEAD
   let thorvald = useSelector((state: RootState) => state.fight.thorvald);
   const fighterLevel = useSelector(
     (state: RootState) => state.fight.battleEnemy?.level
   );
+=======
+  const { thorvald, hitEnemy, clickOnDeadEnemy, enemiesForFight } =
+    useFightStore();
+>>>>>>> layout
 
-  const dispatch = useAppDispatch();
+  const fighterLevel = enemiesForFight.level;
 
   useEffect(() => {
     if (fighterLevel) {
@@ -27,11 +30,11 @@ export const Fighter = (props: PropsType) => {
   const [animateClass, setAnimateClass] = useState("");
 
   const clickedDeadEnemy = () => {
-    dispatch(clickOnDeadEnemy());
+    clickOnDeadEnemy();
   };
 
   const handleClick = () => {
-    dispatch(hitEnemy());
+    hitEnemy();
   };
 
   return (

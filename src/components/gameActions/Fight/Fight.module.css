@@ -1,5 +1,5 @@
 .main {
-  min-height: 100vh;
+  min-height: 94.7vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,18 +74,30 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
   font-family: "Gothic A1", sans-serif;
   color: rgb(107, 63, 6);
+  z-index: 10;
 }
 
 .modalContent {
   background-color: rgb(214, 214, 165);
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  width: 90%;
+  text-align: center;
 }
 
 .modal button {
   background-color: rgb(192, 192, 137);
+  color: rgb(107, 63, 6);
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal button:hover {
+  background-color: rgb(243, 243, 172);
 }
 
 @media screen and (max-width: 1280px) {
@@ -102,7 +114,17 @@ img {
 
 @media screen and (max-width: 640px) {
   .wrapper {
-    width: 90%;
+    width: 92%;
     padding: 0px 10px;
+  }
+
+  img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .modalContent {
+    text-wrap: nowrap;
+    width: 78%;
   }
 }

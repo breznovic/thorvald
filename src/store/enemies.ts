@@ -1,9 +1,8 @@
-import { nanoid } from "@reduxjs/toolkit";
 import { FighterType } from "../common/types/types";
 
 export const enemies: FighterType[] = [
   {
-    id: nanoid(8),
+    id: 1,
     name: "Guard",
     strength: 1,
     fullHP: 10,
@@ -17,7 +16,7 @@ export const enemies: FighterType[] = [
   },
 
   {
-    id: nanoid(8),
+    id: 2,
     name: "Archer",
     strength: 2,
     fullHP: 20,
@@ -31,7 +30,7 @@ export const enemies: FighterType[] = [
   },
 
   {
-    id: nanoid(8),
+    id: 3,
     name: "Warrior",
     strength: 3,
     fullHP: 30,
@@ -45,7 +44,7 @@ export const enemies: FighterType[] = [
   },
 
   {
-    id: nanoid(8),
+    id: 4,
     name: "Knight",
     strength: 4,
     fullHP: 50,
@@ -59,7 +58,7 @@ export const enemies: FighterType[] = [
   },
 
   {
-    id: nanoid(8),
+    id: 5,
     name: "Guardsman",
     strength: 5,
     fullHP: 70,
@@ -72,7 +71,7 @@ export const enemies: FighterType[] = [
     isDead: false,
   },
   {
-    id: nanoid(8),
+    id: 6,
     name: "Final",
     strength: 10,
     fullHP: 10,

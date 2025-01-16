@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export type FighterType = {
-  id: string;
+  id: number | string;
   name: string;
   fullHP: number;
   maxHP: number;

@@ -9,15 +9,8 @@ type PropsType = {
 };
 
 export const Fighter = (props: PropsType) => {
-<<<<<<< HEAD
-  let thorvald = useSelector((state: RootState) => state.fight.thorvald);
-  const fighterLevel = useSelector(
-    (state: RootState) => state.fight.battleEnemy?.level
-  );
-=======
   const { thorvald, hitEnemy, clickOnDeadEnemy, enemiesForFight } =
     useFightStore();
->>>>>>> layout
 
   const fighterLevel = enemiesForFight.level;
 

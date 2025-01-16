@@ -1,11 +1,20 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { create } from "zustand";
+import { enemies } from "./enemies";
 import { FighterType, Thorvald } from "../common/types/types";
-import { enemies } from "./../store/enemies";
 
-const initialState: {
+type InitialState = {
   enemiesForFight: FighterType;
   thorvald: Thorvald;
-} = {
+};
+
+type Actions = {
+  setEnemyForFight: () => Promise<void>;
+  hitEnemy: () => void;
+  clickOnDeadEnemy: () => void;
+  resetEnemy: () => void;
+};
+
+const initialState: InitialState = {
   enemiesForFight: enemies[0],
   thorvald: {
     id: "thorvald",
@@ -23,22 +32,19 @@ const initialState: {
   },
 };
 
-export const setEnemyForFight = createAsyncThunk(
-  "fight/setEnemyForFight",
-  async () => {
+const useFightStore = create<InitialState & Actions>((set) => ({
+  ...initialState,
+
+  setEnemyForFight: async () => {
     const res = await Promise.resolve(enemies);
     let enemyForFight = res.find((e) => e.id === e.id);
-    return enemyForFight;
-  }
-);
+    set({ enemiesForFight: enemyForFight });
+  },
 
-export const fightSlice = createSlice({
-  name: "fight",
-  initialState,
-  reducers: {
-    hitEnemy: (state) => {
-      let enemy = state.enemiesForFight;
-      const thorvald = state.thorvald;
+  hitEnemy: () => {
+    set((state: InitialState) => {
+      let enemy = { ...state.enemiesForFight };
+      const thorvald = { ...state.thorvald };
       const enemyArmor = enemy.armor;
       let enemyHP = enemy.fullHP;
       let thorvaldStrength = thorvald.strength - enemyArmor;
@@ -47,7 +53,7 @@ export const fightSlice = createSlice({
 
       if (enemyHP <= 0) {
         enemy.isDead = true;
-        state.thorvald.XP += enemy.XP;
+        thorvald.XP += enemy.XP;
         enemy.fullHP = enemy.maxHP;
         enemy.level += 1;
         enemy.armor += 1;
@@ -64,18 +70,22 @@ export const fightSlice = createSlice({
       if (enemy.level > 5) {
         const currentIndex = enemies.findIndex((e) => e.id === enemy.id);
         const nextIndex = currentIndex + 1;
-        state.enemiesForFight = enemies[nextIndex];
+        enemy = enemies[nextIndex];
       }
-    },
-    clickOnDeadEnemy: (state) => {
-      state.enemiesForFight.isDead = false;
-    },
-    resetEnemy: (state) => {
-      state.enemiesForFight = enemies[0];
-    },
+
+      return { enemiesForFight: enemy, thorvald };
+    });
   },
-});
 
-export const { hitEnemy, clickOnDeadEnemy, resetEnemy } = fightSlice.actions;
+  clickOnDeadEnemy: () => {
+    set((state: InitialState) => ({
+      enemiesForFight: { ...state.enemiesForFight, isDead: false },
+    }));
+  },
 
-export default fightSlice.reducer;
+  resetEnemy: () => {
+    set({ enemiesForFight: enemies[0] });
+  },
+}));
+
+export default useFightStore;

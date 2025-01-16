@@ -1,22 +1,18 @@
 import s from "./Fighter.module.css";
-import { RootState, useAppDispatch } from "../../../store/store";
-import { useSelector } from "react-redux";
 import { FighterType, Thorvald } from "../../../common/types/types";
-import { clickOnDeadEnemy, hitEnemy } from "../../../features/fightSlice";
 import { useEffect, useState } from "react";
 import death from "../../../images/death.jpg";
+import useFightStore from "../../../store/useFightStore";
 
 type PropsType = {
   fighter: FighterType | Thorvald;
 };
 
 export const Fighter = (props: PropsType) => {
-  let thorvald = useSelector((state: RootState) => state.fight.thorvald);
-  const fighterLevel = useSelector(
-    (state: RootState) => state.fight.enemiesForFight.level
-  );
+  const { thorvald, hitEnemy, clickOnDeadEnemy, enemiesForFight } =
+    useFightStore();
 
-  const dispatch = useAppDispatch();
+  const fighterLevel = enemiesForFight.level;
 
   useEffect(() => {
     fighterLevel >= 1 ? setAnimateClass(s.animate) : setAnimateClass(s.line);
@@ -25,11 +21,11 @@ export const Fighter = (props: PropsType) => {
   const [animateClass, setAnimateClass] = useState("");
 
   const clickedDeadEnemy = () => {
-    dispatch(clickOnDeadEnemy());
+    clickOnDeadEnemy();
   };
 
   const handleClick = () => {
-    dispatch(hitEnemy());
+    hitEnemy();
   };
 
   return (

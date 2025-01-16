@@ -1,8 +1,7 @@
 import s from "./Final.module.css";
 import sword from "../../images/sword.png";
-import { resetEnemy } from "../../features/fightSlice";
-import { useAppDispatch } from "../../store/store";
 import { useNavigate } from "react-router-dom";
+import useFightStore from "../../store/useFightStore";
 
 const content = [
   "New chapters",
@@ -13,15 +12,14 @@ const content = [
 ];
 
 const Final = () => {
-  const dispatch = useAppDispatch();
+  const { resetEnemy } = useFightStore();
+
   const navigate = useNavigate();
 
   const reset = () => {
-    dispatch(resetEnemy());
+    resetEnemy();
     navigate("/main");
   };
-
-  console.log(reset);
 
   return (
     <div className={s.container}>

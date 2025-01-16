@@ -37,7 +37,8 @@ export const enemies: FighterType[] = [
     fullHP: 30,
     maxHP: 30,
     armor: 3,
-    avatar: "https://wallpapersmug.com/large/ad2083/fantasy-warrior-art.jpg",
+    avatar:
+      "https://preview.redd.it/sir-henry-corleigh-medieval-fantasy-knight-art-v0-oit71skl36q81.jpg?auto=webp&s=a587ebca1867262234e8e4223f2963e86e08d3e1",
     XP: 15,
     level: 1,
     isDead: false,

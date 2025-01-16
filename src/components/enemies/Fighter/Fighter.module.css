@@ -129,9 +129,10 @@
   .fighter {
     width: 280px;
     min-height: 250px;
+    gap: 2px; 
   }
 
   .line {
-    margin: 5px 0px 2px 0px;
+    margin: 2px 0px 2px 0px;
   }
 }

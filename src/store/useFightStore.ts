@@ -58,6 +58,14 @@ const useFightStore = create<InitialState & Actions>((set) => ({
         enemy.level += 1;
         enemy.armor += 1;
 
+        if (thorvald.XP >= thorvald.levelsScore) {
+          let remainingXP = thorvald.XP - thorvald.levelsScore;
+          thorvald.levelsScore += 10;
+          thorvald.XP = initialState.thorvald.XP + remainingXP;
+          thorvald.strength += 1;
+          thorvald.level += 1;
+        }
+
         if (enemy.level > 5) {
           const currentIndex = enemies.findIndex((e) => e.id === enemy.id);
           const nextIndex = currentIndex + 1;

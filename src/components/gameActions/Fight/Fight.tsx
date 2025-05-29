@@ -10,7 +10,7 @@ export const Fight = () => {
 
   const navigate = useNavigate();
 
-  if (enemyForFight.name === "Final") {
+  if (enemyForFight.id === "Final") {
     navigate("/final");
   }
 

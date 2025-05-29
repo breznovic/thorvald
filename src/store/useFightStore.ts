@@ -85,6 +85,7 @@ const useFightStore = create<InitialState & Actions>((set) => ({
 
   resetEnemy: () => {
     set({ enemiesForFight: enemies[0] });
+    set({ thorvald: initialState.thorvald });
   },
 }));
 
